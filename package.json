@@ -1,10 +1,9 @@
 {
   "private": true,
-  "name": "mine-up",
-  "description": "MineUp",
-  "version": "1.0.0",
-  "author": "reszi",
-  "main": "electron/app/background.js",
+  "name": "my-nextron-app",
+  "description": "My application description",
+  "version": "0.1.0",
+  "main": "app/background.js",
   "scripts": {
     "dev": "nextron",
     "build": "nextron build",
@@ -12,17 +11,15 @@
   },
   "dependencies": {
     "electron-serve": "^1.1.0",
-    "electron-store": "^8.1.0"
+    "electron-store": "^8.1.0",
+    "minecraft-launcher-core": "^3.17.3"
   },
   "devDependencies": {
-    "@types/node": "^18.11.18",
-    "@types/react": "^18.0.26",
     "electron": "^26.2.2",
     "electron-builder": "^24.6.4",
     "next": "^12.3.4",
-    "nextron": "^8.11.3",
+    "nextron": "^8.12.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "typescript": "^4.9.4"
+    "react-dom": "^18.2.0"
   }
 }
