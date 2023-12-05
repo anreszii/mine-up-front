@@ -3,7 +3,7 @@ import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
 
-export default function HomePage() {
+const HomePage = () => {
   const [message, setMessage] = useState("No message found");
   const [username, setUsername] = useState("reszi");
   const [password, setPassword] = useState("");
@@ -54,4 +54,6 @@ export default function HomePage() {
       </div>
     </React.Fragment>
   );
-}
+};
+
+export default HomePage;

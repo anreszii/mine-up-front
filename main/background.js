@@ -54,8 +54,12 @@ const logIn = (event, username, password, minRAM, maxRAM, version) => {
   await app.whenReady();
 
   const mainWindow = createWindow("main", {
-    width: 1000,
+    width: 500,
     height: 600,
+    maxWidth: 500,
+    maxHeight: 600,
+    minWidth: 500,
+    minHeight: 600,
     webPreferences: {
       preload: path.join(__dirname, "preload.js"),
     },
@@ -68,6 +72,12 @@ const logIn = (event, username, password, minRAM, maxRAM, version) => {
     await mainWindow.loadURL(`http://localhost:${port}/home`);
     mainWindow.webContents.openDevTools();
   }
+
+  ipcMain.on("window-change-resolution", () => {
+    mainWindow.setSize(1024, 720, true);
+    mainWindow.setMinimumSize(1024, 720);
+    mainWindow.setMaximumSize(1024, 720);
+  });
 })();
 
 app.on("window-all-closed", () => {
